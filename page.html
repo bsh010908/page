@@ -11,7 +11,9 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/228-be7af77db6b2fe94c31d.css">
     <link rel="preload" as="style" href="https://demo.templatemonster.com/assets/css/4-4f393d5cb64c36c3bf9f.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/4-4f393d5cb64c36c3bf9f.css">
-    <link hred="css/page.css" rel="stylesheet">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="page.css">
+
 
     <script src="https://account.templatemonster.com/cp/default.js" async="" type="text/javascript"></script>
 </head>
@@ -21,43 +23,24 @@
   <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MS2BNB" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
-
 <div class="wrap">
     <header class="header" id="frame-panel">
         <a href="#" class="back-to-product my-local-title">
             <span class="back-to-product-icon"></span>
             내 맘대로 바꾼 제목
         </a>
-    </header>
+ <div>
+  <button class="device-btn" data-device="desktop">데스크탑</button>
+  <button class="device-btn" data-device="tablet">태블릿</button>
+  <button class="device-btn" data-device="mobile">모바일</button>
+</div>
+<!-- 디바이스 전환 버튼 -->
+<div id="deviceToggle" style="position: fixed; bottom: 20px; right: 20px; z-index: 999;">
+    <button id="toggleBtn">Device Mode</button>
 </div>
 
-            <div class="devices devices-static" id="devices"
-                data-translations="{&quot;desktop&quot;:&quot;Desktop&quot;,&quot;tablet&quot;:&quot;Tablet&quot;,&quot;smartphone&quot;:&quot;Mobile&quot;}">
-                
-                
-                <button type="button" class="device-btn device-btn_smartphone" title="Mobile"><svg width="32"
-                        height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="device-btn-icon">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M16.667 6.667H14a.667.667 0 010-1.334h2.667a.667.667 0 010 1.334zm0 18.666H14A.667.667 0 0114 24h2.667a.667.667 0 010 1.333zM10 4c-.367 0-.667.3-.667.667V26c0 .367.3.667.667.667h10.667c.366 0 .666-.3.666-.667V4.667c0-.367-.3-.667-.666-.667H10zm10.667 24H10c-1.103 0-2-.897-2-2V4.667c0-1.103.897-2 2-2h10.667c1.102 0 2 .897 2 2V26c0 1.103-.898 2-2 2z">
-                        </path>
-                    </svg> </button>
-                    
-                    <button type="button" class="device-btn device-btn_tablet device-btn_active"
-                    title="Tablet"><svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
-                        class="device-btn-icon">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M16.667 6.667H14a.667.667 0 010-1.334h2.667a.667.667 0 010 1.334zm0 18.666H14A.667.667 0 0114 24h2.667a.667.667 0 010 1.333zM7.333 4c-.366 0-.666.3-.666.667V26c0 .367.3.667.667.667h16c.366 0 .666-.3.666-.667V4.667C24 4.3 23.7 4 23.334 4h-16zm16 24h-16c-1.102 0-2-.897-2-2V4.667c0-1.103.898-2 2-2h16c1.103 0 2 .897 2 2V26c0 1.103-.897 2-2 2z">
-                        </path>
-                    </svg> </button>
-                    
-                    <button type="button" class="device-btn device-btn_desktop" title="Desktop"><svg
-                        width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
-                        class="device-btn-icon">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M4.389 20.176H28V4.78a.701.701 0 00-.694-.704H5.083a.701.701 0 00-.694.704v15.395zm0 1.407v.704c0 .387.312.703.694.703h22.223a.701.701 0 00.694-.703v-.704H4.389zm8.53 5.01h6.552l-1.042-2.195h-4.47l-1.04 2.195zM20.36 28h-8.333a.695.695 0 01-.549-.27.715.715 0 01-.125-.604l1.172-2.728H5.083C3.935 24.398 3 23.45 3 22.287V4.78c0-1.164.935-2.111 2.083-2.111h22.223c1.148 0 2.083.947 2.083 2.11v17.507c0 1.164-.935 2.11-2.083 2.11h-7.444l1.173 2.73a.715.715 0 01-.125.603.695.695 0 01-.549.27z">
-                        </path>
-                    </svg> </button>
-            </div>
+
+</div>               
             <div class="header-buttons">
                 <div class="add-to-cart" id="add-to-cart"
                     data-translations="{&quot;label&quot;:&quot;Buy Now&quot;,&quot;modalLabel&quot;:&quot;Add to Cart&quot;,&quot;download&quot;:&quot;Download&quot;,&quot;servicesTitle&quot;:&quot;Recommended services available for this item&quot;,&quot;freeTitle&quot;:&quot;Free Product&quot;}"
@@ -269,6 +252,7 @@
             style="height: 1px; width: 1px; margin: -1px; overflow: hidden; white-space: nowrap; border: 0px; padding: 0px; position: absolute;">
         </div>
     </div>
+    <script src="button.js"></script>
 </body>
 
 </html>
