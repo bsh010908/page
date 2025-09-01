@@ -86,6 +86,21 @@
             width: 0
         }
 
+        .my-local-title {
+    background-color: #facccc;
+    color: #333;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+}
+
+.my-local-title:hover {
+    background-color: #c91f1f;
+}
+
+
         .back-to-product {
             align-items: baseline;
             color: #9cc9f5;
