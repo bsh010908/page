@@ -1,0 +1,19 @@
+#reviewList .review {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+#reviewList .heart {
+  cursor: pointer;
+  color: gray;
+  font-size: 20px;
+  user-select: none;
+  transition: transform 0.2s;
+}
+
+#reviewList .heart.liked {
+  color: red;
+  transform: scale(1.2);
+}
