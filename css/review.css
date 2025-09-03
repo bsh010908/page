@@ -1,42 +1,75 @@
+/* body 기본 설정 */
 body {
   font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  background: #4d4a4a;
   padding: 20px;
+  color: #333;
 }
-h2 { text-align: center; margin-bottom: 20px; }
-form {
+
+/* 제목 */
+h2, h3, h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* 후기 폼 */
+#reviewForm {
   background: #fff;
-  padding: 20px;
+  padding: 25px;
   border-radius: 8px;
-  max-width: 600px;
-  margin: 0 auto 40px auto;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 40px; /* 폼과 목록 사이 간격 */
+  box-shadow: none;     /* 그림자 제거 */
 }
-.form-wrap { margin-bottom: 15px; }
-.form-label { display: block; margin-bottom: 5px; font-weight: bold; }
-.form-input, textarea {
+
+/* 각 입력 영역 */
+.form-wrap {
+  display: flex;
+  flex-direction: column; /* 라벨과 입력/별점 세로 배치 */
+  margin-bottom: 20px;
+}
+
+/* 입력창 */
+.form-input,
+textarea {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   border-radius: 4px;
-  border: 1px solid #423838;
+  border: 1px solid #ccc;
   box-sizing: border-box;
+  font-size: 14px;
+  color: #333;
 }
-textarea { height: 100px; resize: none; }
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* 별점 */
+#starRating {
+  display: flex;        /* 별들을 가로로 나열 */
+  gap: 5px;             /* 별 사이 간격 */
+  font-size: 30px;
+  margin-top: 5px;      /* 라벨과 별점 사이 간격 */
+}
 
 #starRating span {
-  font-size: 30px;
   cursor: pointer;
   color: #ccc;
   transition: color 0.2s;
-  display: inline-block;
-  margin-right: 5px;
 }
+
 #starRating span.selected,
 #starRating span.hovered {
   color: gold;
 }
 
-.form-button { text-align: right; }
+/* 버튼 */
+.form-button {
+  text-align: right;
+}
+
 .button-primary-outline {
   padding: 10px 20px;
   border: 2px solid #007BFF;
@@ -47,28 +80,40 @@ textarea { height: 100px; resize: none; }
   cursor: pointer;
   transition: all 0.2s;
 }
+
 .button-primary-outline:hover {
   background: #007BFF;
   color: #fff;
 }
 
+/* 후기 목록 */
 #reviewList {
-  max-width: 600px;
-  margin: 0 auto;
-}
-.review {
-  background: #fff;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
-  position: relative;
-  transition: transform 0.2s;
-}
-.review:hover {
-  transform: translateY(-2px);
+  margin-top: 20px;
 }
 
+.review {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px; /* 리뷰 간격 */
+  border-radius: 8px;
+  box-shadow: none;    /* 그림자 제거 */
+  color: #333;
+}
+
+.review-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #007BFF;
+}
+
+.review-text {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* 하트 좋아요 */
 .heart {
   cursor: pointer;
   font-size: 20px;
@@ -77,6 +122,7 @@ textarea { height: 100px; resize: none; }
   display: inline-block;
   margin-top: 10px;
 }
+
 .heart.liked {
   color: red;
   animation: heartbeat 0.3s;
