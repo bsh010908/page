@@ -1727,6 +1727,10 @@ p+.list-marked {
 	display: inline-block;
 }
 
+.contact-list {
+  color: #ffffff; /* 기본 글자색 흰색 */
+}
+
 .contact-list span {
 	width: 105px;
 }
