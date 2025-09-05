@@ -3401,7 +3401,7 @@ textarea.form-input {
 }
 
 .footer-classic a:hover {
-	color: #ea202e;
+	color: #001e81;
 }
 
 *+.footer-address {
@@ -3524,7 +3524,7 @@ a.footer-social-link {
 	justify-content: center;
 	font-size: 25px;
 	color: #ffffff;
-	background-color: #ea202e;
+	background-color: #312ef5;
 }
 
 @media (min-width: 576px) {
